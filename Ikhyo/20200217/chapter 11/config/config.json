@@ -2,8 +2,8 @@
   "thresh": 10,
   "open_threshold_seconds": 60,
   "display": true,
-  "twilio_sid":"ACfb0a028ace9cb8f7e2ede6640a8639da",
-  "twilio_auth": "50ad0e5ca5c2eecca3b1e36ec38632d8",
+  "twilio_sid":"ACfb0a028ace9cb8f7e2ede6640a86",
+  "twilio_auth": "50ad0e5ca5c2eecca3b1e36ec386",
   "twilio_to": "+8201058093935",
   "twilio_from": "+1 469 844 4604",
   "address_id": "dlrgy22@gmail.com"
