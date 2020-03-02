@@ -34,10 +34,10 @@ def detect_motion(frameCount):
             if motion is not None:
                 (thresh,(minX,minY,maxX,maxY))=motion
                 cv2.rectangle(frame,(minX,minY),(maxX,maxY),(0,0,255),2)
-            md.update(gray)
-            total += 1
-            with lock:
-                outputFrame = frame.copy()
+        md.update(gray)
+        total += 1
+        with lock:
+            outputFrame = frame.copy()
 def generate():
     global outputFrame, lock
     while True:
@@ -47,7 +47,7 @@ def generate():
             (flag,encodedImage) = cv2.imencode(".jpg",outputFrame)
             if not flag:
                 continue
-            yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n'+bytearray(encodedImage)+b'\r\n')
+        yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n'+bytearray(encodedImage)+b'\r\n')
 @app.route("/video_feed")
 def video_feed():
     return Response(generate(),mimetype="multipart/x-mixed-replace; boundary=frame")
