@@ -1,0 +1,9 @@
+{
+  "diff_flag": false,
+  "min_area": 350,
+  "max_disappeared": 10,
+  "max_distance": 120,
+  "x_offset": 0,
+  "y_offset": 100,
+  "limit": 130
+}
